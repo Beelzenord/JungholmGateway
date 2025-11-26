@@ -1,7 +1,15 @@
-﻿namespace JungholmInstruments.ViewModels
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using JungholmInstruments.Models;
+
+namespace JungholmInstruments.ViewModels
 {
     public partial class MainWindowViewModel : ViewModelBase
     {
-        public string Greeting { get; } = "Welcome to Avalonia!";
+        [ObservableProperty]
+        private UserProfile? _currentUser;
+
+        public string Greeting => CurrentUser != null 
+            ? $"Welcome, {CurrentUser.FirstName ?? CurrentUser.Email}!" 
+            : "Welcome to Jungholm Instruments!";
     }
 }

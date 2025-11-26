@@ -15,6 +15,30 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <Grid RowDefinitions="Auto,*" Margin="20">
+        <!-- Header -->
+        <StackPanel Grid.Row="0" Spacing="10" Margin="0,0,0,20">
+            <TextBlock Text="{Binding Greeting}" 
+                       FontSize="24" 
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"/>
+            <TextBlock Text="Gateway for Laboratory Instruments" 
+                       FontSize="14" 
+                       Foreground="Gray"
+                       HorizontalAlignment="Center"/>
+        </StackPanel>
+
+        <!-- Main Content -->
+        <StackPanel Grid.Row="1" Spacing="15" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Welcome to the instrument gateway!" 
+                       FontSize="16"
+                       HorizontalAlignment="Center"/>
+            <TextBlock Text="Login functionality is now working." 
+                       FontSize="14"
+                       Foreground="Gray"
+                       HorizontalAlignment="Center"
+                       Margin="0,10,0,0"/>
+        </StackPanel>
+    </Grid>
 
 </Window>
