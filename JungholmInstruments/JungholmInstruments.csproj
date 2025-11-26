@@ -7,6 +7,7 @@
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
     <RootNamespace>JungholmInstruments</RootNamespace>
     <AssemblyName>JungholmInstruments</AssemblyName>
+    <ApplicationIcon>Assets\jungholm-logo.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
